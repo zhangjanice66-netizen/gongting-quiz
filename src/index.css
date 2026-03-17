@@ -1,0 +1,72 @@
+:root {
+  /* Colors */
+  --palace-red: #8C2727;
+  --glazed-gold: #D4AF37;
+  --rice-white: #F2E8D5;
+  --emerald-green: #008B8B;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: rgba(212, 175, 55, 0.3);
+  
+  /* Fonts */
+  --font-heading: 'Noto Serif SC', serif;
+  --font-body: 'Noto Sans SC', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #1a1a1a; /* Dark background for desktop wrapper */
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Prevent body scroll */
+}
+
+/* Mobile Container */
+#root {
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  /* Make height 100dvh for mobile browsers if supported */
+  height: 100dvh;
+  background-color: var(--rice-white);
+  background-image: url('/palace_bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--palace-red);
+}
+
+button {
+  font-family: var(--font-heading);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/* Scrollbar hiding for the container */
+#root::-webkit-scrollbar {
+  display: none;
+}
+#root {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
