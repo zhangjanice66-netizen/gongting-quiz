@@ -1,4 +1,0 @@
-管理员登陆密码
-    curl -X POST http://47.98.158.156/intrigue/api/admin/setup-admin \
-  -H "Content-Type: application/json" \
-  -d '{"key": "sjbbzhijia2026admin"}'
